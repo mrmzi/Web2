@@ -1,0 +1,367 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background-color: #005f99;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #0284c7;
+  color: #fff;
+}
+
+.nav-links a.active {
+  background-color: #0284c7;
+  color: #fff;
+  box-shadow: 0 0 8px #0284c7;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  background: linear-gradient(135deg, #005f99, #0284c7);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  max-width: 700px;
+}
+/* App */
+.main-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.students-grid {
+ display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+/* Course info */
+.course-info {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  text-align: right;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.course-info h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+.course-info .semester,
+.course-info .units,
+.course-info .schedule {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.course-info .description {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.course-info .section {
+  margin-top: 20px;
+}
+
+.course-info h3 {
+  color: #023e8a;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.course-info ul,
+.course-info ol {
+  padding-right: 20px;
+}
+
+.course-info li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.syllabus-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 16px;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.syllabus-link:hover {
+  background-color: #005f8a;
+}
+/* instructor */
+.instructor {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  background-color: #eef2f7;
+  padding: 40px 30px;
+  margin: 40px auto;
+  border-radius: 20px;
+  max-width: 900px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  text-align: right;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.instructor-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #0077b6;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.instructor-info h2 {
+  font-size: 2rem;
+  color: #023e8a;
+  margin-bottom: 12px;
+}
+
+.instructor-info .bio,
+.instructor-info .experience {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.skills h3,
+.contact h3 {
+  color: #0077b6;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.skills ul,
+.contact ul {
+  list-style: none;
+  padding-right: 0;
+  margin: 0;
+}
+
+.skills li,
+.contact li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact a {
+  color: #0077b6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #005f8a;
+}
+/* student Card */
+.student-card {
+  width: 250px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.student-card:hover,
+.student-card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+.student-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #0077b6;
+}
+
+.student-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.student-info h3 {
+  font-size: 1.25rem;
+  color: #023e8a;
+  margin-bottom: 10px;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.student-info p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  font-family: "Vazirmatn", sans-serif;
+}
+/* student Form */
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  font-family: "Vazirmatn", sans-serif;
+  color: #023e8a;
+}
+
+.modal-content label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 7px 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+.modal-content textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.modal-buttons button[type="submit"] {
+  background-color: #0077b6;
+  color: white;
+}
+
+.modal-buttons button[type="submit"]:hover {
+  background-color: #023e8a;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #ccc;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background-color: #999;
+}
+
+.error {
+  color: #d90429;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Vazirmatn", sans-serif;
+}

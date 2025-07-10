@@ -1,0 +1,114 @@
+{
+  "course": {
+    "title": "درس برنامه‌نویسی وب ۲",
+    "description": "این درس دانشجویان را با مفاهیم پیشرفته طراحی وب، معماری SPA و کار با کتابخانه React آشنا می‌کند.",
+    "semester": "تابستان ۱۴۰۴",
+    "units": "2 واحد - عملی",
+    "prerequisites": [
+      "برنامه‌نویسی وب 1"
+    ],
+    "objectives": [
+      "آشنایی با ساختار پروژه‌های React",
+      "درک مفهوم کامپوننت و استفاده مجدد",
+      "استفاده از هوک‌ها و مدیریت state",
+      "برقراری ارتباط با APIها",
+      "استفاده از json-server برای شبیه‌سازی بک‌اند",
+      "پیاده‌سازی فرم‌ها و روتر"
+    ],
+    "topics": [
+      "مقدمه‌ای بر React و JSX",
+      "کامپوننت‌سازی و مدیریت State",
+      "روتر و روتینگ صفحات",
+      "کار با فرم‌ها و validation",
+      "ارتباط با سرور و API",
+      "مدیریت پروژه و پوشه‌بندی در React",
+      "آشنایی با ابزارهای توسعه مانند Vite"
+    ],
+    "resources": [
+      "مستندات رسمی React",
+      "MDN Web Docs",
+      "کتاب Learning React"
+    ],
+    "schedule": "یک‌شنبه‌ها ساعت ۱۰ تا ۱۲",
+    "syllabusLink": "https://example.com/web2-syllabus.pdf"
+  },
+  "instructor": {
+    "name": " دکتر رضایی",
+    "image": "teacher.jpg",
+    "bio": "استادیار گروه مهندسی نرم‌افزار با تخصص در طراحی وب و معماری نرم‌افزارهای SPA",
+    "skills": [
+      "React",
+      "JavaScript پیشرفته",
+      "طراحی رابط کاربری",
+      "توسعه وب مدرن"
+    ],
+    "contact": {
+      "email": "rezai@example.com",
+      "linkedin": "https://linkedin.com/in/rezai",
+      "website": "https://rezai-web.dev"
+    },
+    "experience": "بیش از ۱۰ سال تجربه در زمینه توسعه نرم‌افزار و آموزش برنامه‌نویسی وب، با تمرکز بر تکنولوژی‌های روز دنیا و به‌کارگیری روش‌های نوین آموزشی."
+  },
+  "students": [
+    {
+      "id": "2",
+      "name": "مینا سسی",
+      "image": "mina.jpg",
+      "description": "دانشجوی فعال در زمینه بک‌اند"
+    },
+    {
+      "id": "3",
+      "name": "حسین کاظمی",
+      "image": "hossein.jpg",
+      "description": "علاقه‌مند به طراحی UI/UX"
+    },
+    {
+      "id": "4",
+      "name": "سمیرا محمدی",
+      "image": "samira.jpg",
+      "description": "دانشجوی تازه‌کار در React"
+    },
+    {
+      "id": "5",
+      "name": "رضا غلامی",
+      "image": "reza.jpg",
+      "description": "علاقه‌مند به یادگیری فناوری‌های جدید"
+    },
+    {
+      "id": "6",
+      "name": "سارا جعفری",
+      "image": "sara.jpg",
+      "description": "توسعه‌دهنده علاقه‌مند به فرانت‌اند"
+    },
+    {
+      "id": "7",
+      "name": "امید نادری",
+      "image": "omid.jpg",
+      "description": "علاقه‌مند به برنامه‌نویسی موبایل"
+    },
+    {
+      "id": "8",
+      "name": "نگار حسینی",
+      "image": "negar.jpg",
+      "description": "دانشجوی فعال در پروژه‌های متن‌باز"
+    },
+    {
+      "id": "9",
+      "name": "کامران موسوی",
+      "image": "kamran.jpg",
+      "description": "علاقه‌مند به یادگیری React و Node.js"
+    },
+    {
+      "id": "10",
+      "name": "لیلا رحیمی",
+      "image": "lila.jpg",
+      "description": "توسعه‌دهنده مشتاق به یادگیری فناوری‌های جدید"
+    },
+    {
+      "id": "dd8e",
+      "name": "ali",
+      "image": "thgh",
+      "description": "adadad"
+    }
+  ]
+}

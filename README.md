@@ -2,6 +2,6 @@
 # PROJECT CREATE WITH VITE
 Follow these steps to RUN the project.
 
--- NPM I
--- NPM RUN SERVER
--- NPM RUN DEV
+- NPM I
+- NPM RUN SERVER
+- NPM RUN DEV

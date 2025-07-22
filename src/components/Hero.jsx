@@ -3,6 +3,7 @@ function Hero({ title, description }) {
     <section className="hero">
       <h1>{title}</h1>
       <p>{description}</p>
+      {/*  */}
     </section>
   );
 }

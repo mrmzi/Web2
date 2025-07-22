@@ -1,49 +1,68 @@
 function CourseInfo({ course }) {
   return (
     <section className="course-info" id="course">
-      <h2>{course.title}</h2>
-      <p className="semester">ترم: {course.semester}</p>
-      <p className="units">تعداد واحد: {course.units}</p>
-      <p className="schedule">زمان کلاس: {course.schedule}</p>
+      <div className="course-header">
+        <h2>{course.title}</h2>
+        <p>
+          <strong>ترم:</strong> {course.semester}
+        </p>
+        <p>
+          <strong>تعداد واحد:</strong> {course.units}
+        </p>
+        <p>
+          <strong>زمان کلاس:</strong> {course.schedule}
+        </p>
+        <p className="description">{course.description}</p>
+      </div>
 
-      <p className="description">{course.description}</p>
-
-      <div className="section">
-        <h3>پیش‌نیازها:</h3>
-        <ul>
+      {/* پیش‌نیازها */}
+      <div className="card-section">
+        <h3>🧩 پیش‌نیازها</h3>
+        <div className="cards">
           {course.prerequisites.map((item, idx) => (
-            <li key={idx}>• {item}</li>
+            <div key={idx} className="card">
+              {item}
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
-      <div className="section">
-        <h3>اهداف آموزشی:</h3>
-        <ul>
+      {/* اهداف آموزشی - تایم‌لاین */}
+      <div className="timeline-section">
+        <h3>🎯 اهداف آموزشی</h3>
+        <ul className="timeline">
           {course.objectives.map((goal, idx) => (
-            <li key={idx}>✔ {goal}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="section">
-        <h3>سرفصل‌ها:</h3>
-        <ol>
-          {course.topics.map((topic, idx) => (
-            <li key={idx}>
-              {idx + 1}. {topic}
+            <li key={idx} style={{ "--i": idx }}>
+              <div className="circle"></div>
+              <div className="content">{goal}</div>
             </li>
           ))}
-        </ol>
+        </ul>
       </div>
 
-      <div className="section">
-        <h3>منابع پیشنهادی:</h3>
-        <ul>
-          {course.resources.map((res, idx) => (
-            <li key={idx}>🔹 {res}</li>
+      {/* سرفصل‌ها - تایم‌لاین شماره‌دار */}
+      <div className="timeline-section">
+        <h3>📚 سرفصل‌ها</h3>
+        <ul className="timeline numbered">
+          {course.topics.map((topic, idx) => (
+            <li key={idx} style={{ "--i": idx }}>
+              <div className="circle">{idx + 1}</div>
+              <div className="content">{topic}</div>
+            </li>
           ))}
         </ul>
+      </div>
+
+      {/* منابع پیشنهادی */}
+      <div className="card-section">
+        <h3>🔹 منابع پیشنهادی</h3>
+        <div className="cards">
+          {course.resources.map((res, idx) => (
+            <div key={idx} className="card">
+              {res}
+            </div>
+          ))}
+        </div>
       </div>
 
       {course.syllabusLink && (

@@ -10,16 +10,11 @@ function Navbar({ onAddClick }) {
 
   return (
     <nav className="navbar">
-      <div
-        className="logo"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        وب ۲
-      </div>
       <div className="nav-links">
         <NavLink
           to="/"
           end
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className={({ isActive }) => (isActive ? "active" : "")}
         >
           صفحه اصلی
@@ -51,9 +46,17 @@ function Navbar({ onAddClick }) {
         >
           لیست دانشجویان
         </a>
+      </div>
+
+      <div className="addstudent">
         <a onClick={onAddClick} style={{ cursor: "pointer" }}>
           اضافه کردن دانشجو
         </a>
+        <img
+          className="addstudenticon"
+          src="../../public/images/user.png"
+          alt="add-male-user"
+        />
       </div>
     </nav>
   );

@@ -1,4 +1,9 @@
 /* Navbar */
+@font-face {
+  font-family: "vazir";
+  src: url("../public/fonts/Vazirmatn-Light.ttf");
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -9,7 +14,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius:0 0 20px 20px ;
+  background: linear-gradient(135deg, #005f99, #0284c7);
 }
 
 .logo {
@@ -22,7 +28,7 @@
 
 .nav-links {
   display: flex;
-  gap: 25px;
+  width: 40%;
 }
 
 .nav-links a {
@@ -33,19 +39,34 @@
   padding: 6px 10px;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  margin-right: 10px;
 }
 
 .nav-links a:hover {
-  background-color: #0284c7;
+  background-color: #025d8a;
   color: #fff;
 }
 
 .nav-links a.active {
-  background-color: #0284c7;
+   background-color: #025d8a;
   color: #fff;
   box-shadow: 0 0 8px #0284c7;
 }
-
+.addstudent {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  color: white;
+  background-color: #0284c7;
+  padding: 6px 10px;
+  border-radius: 5px;
+  justify-content: center;
+  padding-top: 10px;
+}
+.addstudenticon {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 /* Hero */
 
 .hero {
@@ -84,11 +105,23 @@
 }
 
 .students-grid {
- display: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  scroll-margin-top: 200px;
+}
+.students {
   padding: 20px 0;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  scroll-margin-top: 80px;
+}
+.students h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 10px;
 }
 /* Course info */
 .course-info {
@@ -100,7 +133,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   direction: rtl;
   text-align: right;
-  font-family: "Vazirmatn", sans-serif;
+  scroll-margin-top: 80px;
 }
 
 .course-info h2 {
@@ -159,6 +192,7 @@
 }
 /* instructor */
 .instructor {
+  scroll-margin-top: 80px;
   display: flex;
   align-items: flex-start;
   gap: 30px;
@@ -170,7 +204,6 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
   direction: rtl;
   text-align: right;
-  font-family: "Vazirmatn", sans-serif;
 }
 
 .instructor-image img {
@@ -265,14 +298,12 @@
   font-size: 1.25rem;
   color: #023e8a;
   margin-bottom: 10px;
-  font-family: "Vazirmatn", sans-serif;
 }
 
 .student-info p {
   font-size: 1rem;
   color: #555;
   line-height: 1.4;
-  font-family: "Vazirmatn", sans-serif;
 }
 /* student Form */
 
@@ -282,7 +313,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,12 +325,12 @@
   border-radius: 10px;
   padding: 20px 30px;
   width: 320px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .modal-content h2 {
   margin-bottom: 15px;
-  font-family: "Vazirmatn", sans-serif;
+
   color: #023e8a;
 }
 
@@ -307,7 +338,6 @@
   display: block;
   margin-top: 10px;
   font-weight: 600;
-  font-family: "Vazirmatn", sans-serif;
 }
 
 .modal-content input,
@@ -317,7 +347,6 @@
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: "Vazirmatn", sans-serif;
 }
 
 .modal-content textarea {
@@ -337,7 +366,7 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-family: "Vazirmatn", sans-serif;
+
   font-weight: 600;
   transition: background-color 0.3s ease;
 }
@@ -363,5 +392,4 @@
   color: #d90429;
   font-weight: 600;
   margin-bottom: 10px;
-  font-family: "Vazirmatn", sans-serif;
 }

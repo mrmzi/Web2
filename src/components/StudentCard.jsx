@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-function StudentCard({student}) {
+function StudentCard({ student }) {
   const navigate = useNavigate();
 
   const handleClick = () => {

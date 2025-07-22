@@ -1,8 +1,6 @@
-import React from "react";
-
 function Instructor({ instructor }) {
   return (
-    <section className="instructor">
+    <section className="instructor" id="instructor">
       <div className="instructor-image">
         <img src={`/images/${instructor.image}`} alt={instructor.name} />
       </div>

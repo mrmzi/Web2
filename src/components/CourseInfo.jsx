@@ -1,8 +1,6 @@
-import React from 'react'
-
-function CourseInfo({course}) {
+function CourseInfo({ course }) {
   return (
-     <section className="course-info" id='course'>
+    <section className="course-info" id="course">
       <h2>{course.title}</h2>
       <p className="semester">ترم: {course.semester}</p>
       <p className="units">تعداد واحد: {course.units}</p>
@@ -32,7 +30,9 @@ function CourseInfo({course}) {
         <h3>سرفصل‌ها:</h3>
         <ol>
           {course.topics.map((topic, idx) => (
-            <li key={idx}>{idx + 1}. {topic}</li>
+            <li key={idx}>
+              {idx + 1}. {topic}
+            </li>
           ))}
         </ol>
       </div>
@@ -47,12 +47,17 @@ function CourseInfo({course}) {
       </div>
 
       {course.syllabusLink && (
-        <a className="syllabus-link" href={course.syllabusLink} target="_blank" rel="noopener noreferrer">
+        <a
+          className="syllabus-link"
+          href={course.syllabusLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           📄 دانلود برنامه درس
         </a>
       )}
     </section>
-  )
+  );
 }
 
-export default CourseInfo
+export default CourseInfo;

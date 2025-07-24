@@ -13,7 +13,7 @@ function Home({ students, setStudents }) {
     getCourseInfo().then((res) => setCourse(res.data));
     getInstructorInfo().then((res) => setInstructor(res.data));
     getStudents().then((res) => setStudents(res.data));
-  }, []);
+  }, [setStudents]);
 
   return (
     <div className="main-container">

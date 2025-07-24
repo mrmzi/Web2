@@ -708,89 +708,305 @@
 }
 /* student Form */
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
 .modal-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  background: rgba(5, 30, 60, 0.85);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000;
+  animation: fadeInBackdrop 0.4s ease forwards;
+}
+
+@keyframes fadeInBackdrop {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .modal-content {
-  background: white;
-  border-radius: 10px;
-  padding: 20px 30px;
-  width: 320px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #e6f0ff, #b3cfff);
+  border-radius: 22px;
+  padding: 36px 42px;
+  width: 400px;
+  box-shadow:
+    0 15px 35px rgba(0, 60, 130, 0.25),
+    inset 0 0 12px #acc7ff;
+  color: #012c6a;
+  font-family: 'Vazir', sans-serif;
+  position: relative;
+  transform-origin: top center;
+  animation: fadeScaleIn 0.35s ease forwards;
+}
+
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.modal-content.shake {
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-10px); }
+  40%, 80% { transform: translateX(10px); }
 }
 
 .modal-content h2 {
-  margin-bottom: 15px;
+  margin-bottom: 28px;
+  font-weight: 800;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #014f9e;
+  user-select: none;
+  position: relative;
+}
 
+.animated-icon {
   color: #023e8a;
+  font-size: 1.9rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 .modal-content label {
   display: block;
-  margin-top: 10px;
-  font-weight: 600;
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #014b8bcc;
 }
 
 .modal-content input,
 .modal-content textarea {
   width: 100%;
-  padding: 7px 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 14px 18px;
+  margin-top: 8px;
+  border: 2px solid #80aaff;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: #012c6a;
+  transition: all 0.4s ease;
+  background: #d9e7ff;
+  box-shadow: inset 0 1px 4px #c1d5ff;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #023e8a;
+  background: #bbd4ff;
+  box-shadow: 0 0 10px #547cff88;
+}
+
+.input-error {
+  border-color: #d90429 !important;
+  background: #ffdbdb !important;
+  animation: shakeInput 0.35s ease;
+}
+
+@keyframes shakeInput {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
 }
 
 .modal-content textarea {
   resize: vertical;
-  min-height: 60px;
+  min-height: 90px;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  font-weight: 500;
 }
 
 .modal-buttons {
-  margin-top: 15px;
+  margin-top: 28px;
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 20px;
 }
 
 .modal-buttons button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
+  padding: 12px 26px;
+  border-radius: 18px;
+  font-weight: 800;
   cursor: pointer;
-
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.35s ease;
+  user-select: none;
+  font-family: 'Vazir', sans-serif;
+  box-shadow: 0 8px 18px rgba(3, 62, 122, 0.3);
 }
 
-.modal-buttons button[type="submit"] {
-  background-color: #0077b6;
-  color: white;
+.save-btn {
+  background: linear-gradient(120deg, #0077b6, #023e8a);
+  color: #fff;
+  text-shadow: 0 0 4px #0150c3;
 }
 
-.modal-buttons button[type="submit"]:hover {
-  background-color: #023e8a;
+.save-btn:hover {
+  background: linear-gradient(120deg, #023e8a, #0056a3);
+  box-shadow: 0 10px 25px #022f6baa;
+  transform: translateY(-2px);
 }
 
-.modal-buttons button[type="button"] {
-  background-color: #ccc;
+.cancel-btn {
+  background: #f0f0f0;
+  color: #444;
+  box-shadow: 0 8px 15px #c1c1c1aa;
+  font-weight: 700;
 }
 
-.modal-buttons button[type="button"]:hover {
-  background-color: #999;
+.cancel-btn:hover {
+  background: #d7d7d7;
+  color: #222;
+  box-shadow: 0 10px 20px #a7a7a7bb;
+  transform: translateY(-2px);
 }
 
 .error {
   color: #d90429;
+  font-weight: 800;
+  margin-bottom: 12px;
+  user-select: none;
+  background: #ffe5e5;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px #d9042955;
+  text-align: center;
+  font-size: 1.05rem;
+  animation: fadeInError 0.35s ease forwards;
+}
+
+@keyframes fadeInError {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.image-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.image-input-group input[type="text"] {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.image-input-group input[type="file"] {
+  border: none;
+  background: #0077b6;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
   font-weight: 600;
-  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.image-input-group input[type="file"]:hover {
+  background-color: #023e8a;
+}
+
+.image-preview {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 180px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(3, 62, 122, 0.3);
+  object-fit: contain;
+  user-select: none;
+}
+.file-upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.file-name {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #023e8a;
+  font-weight: 600;
+  /* color: white; */
+}
+.image-input-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 400px;
+}
+
+.image-url-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.image-url-input:focus {
+  border-color: #0077b6;
+  outline: none;
+}
+
+.upload-btn {
+  background-color: #0077b6;
+  color: whitesmoke;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #023e8a;
+  /* color: white; */
+}
+
+.file-input {
+  display: none;
+}
+
+/* مخفی کردن اسکرول بار ولی فعال بودن اسکرول */
+.modal-content {
+  max-height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.modal-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
 }

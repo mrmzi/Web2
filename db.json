@@ -72,74 +72,61 @@
     {
       "id": "2",
       "name": "مینا نامدار",
-      "image": "mina.jpg",
       "description": "دانشجوی فعال در زمینه بک‌اند"
     },
     {
       "id": "3",
       "name": "حسین کاظمی",
-      "image": "hossein.jpg",
+      "image": "../../public/images/student.jpg",
       "description": "علاقه‌مند به طراحی UI/UX"
     },
     {
       "id": "4",
       "name": "سمیرا محمدی",
-      "image": "samira.jpg",
+      "image": "samira",
       "description": "دانشجوی تازه‌کار در React"
     },
     {
       "id": "5",
       "name": "رضا غلامی",
-      "image": "reza.jpg",
+      "image": "reza",
       "description": "علاقه‌مند به یادگیری فناوری‌های جدید"
     },
     {
       "id": "6",
       "name": "سارا جعفری",
-      "image": "sara.jpg",
+      "image": "sara",
       "description": "توسعه‌دهنده علاقه‌مند به فرانت‌اند"
     },
     {
       "id": "7",
       "name": "امید نادری",
-      "image": "omid.jpg",
+      "image": "omid",
       "description": "علاقه‌مند به برنامه‌نویسی موبایل"
     },
     {
       "id": "8",
       "name": "نگار حسینی",
-      "image": "negar.jpg",
+      "image": "negar",
       "description": "دانشجوی فعال در پروژه‌های متن‌باز"
     },
     {
       "id": "9",
       "name": "کامران موسوی",
-      "image": "kamran.jpg",
+      "image": "kamran",
       "description": "علاقه‌مند به یادگیری React و Node.js"
     },
     {
       "id": "10",
       "name": "لیلا رحیمی",
-      "image": "lila.jpg",
+      "image": "lila",
       "description": "توسعه‌دهنده مشتاق به یادگیری فناوری‌های جدید"
-    },
-    {
-      "id": "dd8e",
-      "name": "ali",
-      "image": "thgh",
-      "description": "adadad"
     },
     {
       "id": "d5aa",
       "name": "سمانه ",
       "image": "شکاری",
-      "description": "علاقه من به وب"
-    },
-    {
-      "id": "46a1",
-      "name": "وحدت",
-      "image": "میریزدی",
-      "description": "علاقه مند به نود جی اس"
+      "description": "علاقه مند به وب"
     }
   ]
 }

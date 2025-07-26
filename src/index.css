@@ -196,7 +196,8 @@
   scroll-margin-top: 80px;
 }
 
-.course-header h2 {
+.course-header h2,
+.studentsection h2 {
   font-size: 2.2rem;
   color: #0077b6;
   margin-bottom: 10px;
@@ -447,7 +448,7 @@
   color: #222;
   direction: rtl;
   transition: box-shadow 0.3s ease;
-   scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
 .instructor-card:hover {
@@ -663,48 +664,104 @@
 
 /* student Card */
 .student-card {
-  width: 250px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 123, 255, 0.08);
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 15px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
-  user-select: none;
+  align-items: center;
+  transition: all 0.35s ease;
+  position: relative;
+  padding-top: 50px;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
 }
 
-.student-card:hover,
-.student-card:focus {
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.student-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  outline: none;
+  box-shadow: 0 16px 28px rgba(0, 123, 255, 0.15);
+}
+
+.student-image {
+  position: absolute;
+  top: 0px;
+  background-color: whitesmoke;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .student-image img {
-  width: 100%;
-  height: 180px;
+  width: 88px;
+  height: 88px;
   object-fit: cover;
-  border-bottom: 2px solid #0077b6;
+  border-radius: 50%;
+}
+
+.default-avatar {
+  font-size: 60px;
+  color: #b0c4de;
 }
 
 .student-info {
-  padding: 15px;
+  padding: 60px 20px 20px;
   text-align: center;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .student-info h3 {
-  font-size: 1.25rem;
-  color: #023e8a;
+  font-size: 1.1rem;
+  color: #0077b6;
   margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.student-info .icon {
+  color: #00b4d8;
 }
 
 .student-info p {
-  font-size: 1rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: #444;
   line-height: 1.4;
+  min-height: 55px;
+}
+.studentsection h2 {
+  margin-right: 150px;
+}
+.studentsection h2::after {
+  content: "";
+  display: block;
+  width: 280px;
+  height: 4px;
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  border-radius: 2px;
+  margin: 10px 0;
 }
 /* student Form */
 
@@ -723,8 +780,12 @@
 }
 
 @keyframes fadeInBackdrop {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal-content {
@@ -732,11 +793,9 @@
   border-radius: 22px;
   padding: 36px 42px;
   width: 400px;
-  box-shadow:
-    0 15px 35px rgba(0, 60, 130, 0.25),
-    inset 0 0 12px #acc7ff;
+  box-shadow: 0 15px 35px rgba(0, 60, 130, 0.25), inset 0 0 12px #acc7ff;
   color: #012c6a;
-  font-family: 'Vazir', sans-serif;
+  font-family: "Vazir", sans-serif;
   position: relative;
   transform-origin: top center;
   animation: fadeScaleIn 0.35s ease forwards;
@@ -758,9 +817,18 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-10px); }
-  40%, 80% { transform: translateX(10px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .modal-content h2 {
@@ -782,8 +850,13 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .modal-content label {
@@ -824,9 +897,18 @@
 }
 
 @keyframes shakeInput {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-6px); }
-  40%, 80% { transform: translateX(6px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
 }
 
 .modal-content textarea {
@@ -855,7 +937,7 @@
   gap: 10px;
   transition: all 0.35s ease;
   user-select: none;
-  font-family: 'Vazir', sans-serif;
+  font-family: "Vazir", sans-serif;
   box-shadow: 0 8px 18px rgba(3, 62, 122, 0.3);
 }
 
@@ -900,8 +982,14 @@
 }
 
 @keyframes fadeInError {
-  from { opacity: 0; transform: translateY(-10px);}
-  to { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .image-input-group {
   display: flex;

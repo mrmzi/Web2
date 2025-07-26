@@ -20,10 +20,13 @@ function Home({ students, setStudents }) {
       {course && <Hero title={course.title} description={course.description} />}
       {course && <CourseInfo course={course} />}
       {instructor && <Instructor instructor={instructor} />}
+      <div className="studentsection">
+      <h2>لیست دانشجویان</h2>
       <div className="students-grid" id="students">
         {students.map((student) => (
           <StudentCard key={student.id} student={student} />
         ))}
+      </div>
       </div>
     </div>
   );

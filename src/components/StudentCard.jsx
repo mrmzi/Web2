@@ -1,4 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserGraduate,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 function StudentCard({ student }) {
   const navigate = useNavigate();
@@ -6,6 +11,13 @@ function StudentCard({ student }) {
   const handleClick = () => {
     navigate(`/students/${student.id}`);
   };
+
+  const isValidImage = (url) => {
+    return /\.(jpg|jpeg|png|webp|gif|svg)$/i.test(url);
+  };
+
+  const showImage = student.image && isValidImage(student.image);
+
   return (
     <div
       className="student-card"
@@ -15,10 +27,17 @@ function StudentCard({ student }) {
       aria-pressed="false"
     >
       <div className="student-image">
-        <img src={`/images/${student.image}`} alt={student.name} />
+        {showImage ? (
+          <img src={`/images/${student.image}`} alt={student.name} />
+        ) : (
+          <FontAwesomeIcon icon={faUserCircle} className="default-avatar" />
+        )}
       </div>
       <div className="student-info">
-        <h3>{student.name}</h3>
+        <h3>
+          <FontAwesomeIcon icon={faUserGraduate} className="icon" />
+          {student.name}
+        </h3>
         <p>{student.description}</p>
       </div>
     </div>

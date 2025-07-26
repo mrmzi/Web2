@@ -80,3 +80,4 @@ function CourseInfo({ course }) {
 }
 
 export default CourseInfo;
+// Version 2.0

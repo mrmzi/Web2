@@ -1,3 +1,5 @@
+/* // Version 2.0 */
+
 /* Navbar */
 @font-face {
   font-family: "vazir";
@@ -78,7 +80,7 @@
   max-width: 1250px;
   margin: 5px auto;
   border-radius: 20px;
-  background: linear-gradient(135deg, #007cf0 0%, #00dfd8 50%, #f9f4a6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #cde6ff 50%, #7fbfff 100%);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   color: #111;
   text-align: left;
@@ -120,18 +122,18 @@
 .cta-btn {
   padding: 14px 32px;
   background: #f2f200;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
   color: #111;
   font-weight: 700;
   font-size: 1.1rem;
   border: none;
   border-radius: 9999px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(242, 242, 0, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 214, 242, 0.6);
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-btn:hover {
-  background: #e6d800;
   transform: scale(1.05);
 }
 .cta-btn a {
@@ -146,7 +148,7 @@
   background-image: url("../public/images/Hero-banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
 }

@@ -27,3 +27,4 @@ export default defineConfig([
     },
   },
 ])
+// Version 2.0

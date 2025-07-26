@@ -70,27 +70,10 @@
   },
   "students": [
     {
-      "id": "2",
-      "name": "مینا نامدار",
-      "description": "دانشجوی فعال در زمینه بک‌اند"
-    },
-    {
-      "id": "3",
-      "name": "حسین کاظمی",
-      "image": "../../public/images/student.jpg",
-      "description": "علاقه‌مند به طراحی UI/UX"
-    },
-    {
       "id": "4",
       "name": "سمیرا محمدی",
       "image": "samira",
-      "description": "دانشجوی تازه‌کار در React"
-    },
-    {
-      "id": "5",
-      "name": "رضا غلامی",
-      "image": "reza",
-      "description": "علاقه‌مند به یادگیری فناوری‌های جدید"
+      "description": "دانشجوی تازه‌کار در nex"
     },
     {
       "id": "6",
@@ -121,12 +104,6 @@
       "name": "لیلا رحیمی",
       "image": "lila",
       "description": "توسعه‌دهنده مشتاق به یادگیری فناوری‌های جدید"
-    },
-    {
-      "id": "d5aa",
-      "name": "سمانه ",
-      "image": "شکاری",
-      "description": "علاقه مند به وب"
     }
   ]
 }

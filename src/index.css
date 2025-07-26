@@ -1098,3 +1098,9 @@
 .modal-content::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
 }
+.custom-toast {
+  font-family: "vazir";
+  font-size: 1rem !important;
+  text-align: center;
+  padding-right: 50px;
+}

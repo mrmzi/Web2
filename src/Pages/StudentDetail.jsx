@@ -2,6 +2,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getStudentById, updateStudent, deleteStudent } from "../services/api";
 import "./StudentDetail.css";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 function StudentDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -31,30 +35,51 @@ function StudentDetail() {
     };
 
     updateStudent(id, updatedStudent).then(() => {
-      alert("تغییرات با موفقیت ذخیره شد.");
+      toast.success("تغییرات با موفقیت ذخیره شد.");
       navigate("/");
     });
   };
 
-  const handleDelete = () => {
-    if (
-      window.confirm("آیا مطمئن هستید که می‌خواهید این دانشجو را حذف کنید؟")
-    ) {
+
+const handleDelete = () => {
+  Swal.fire({
+    title: "آیا مطمئن هستی؟",
+    text: "دانشجو به صورت دائمی حذف خواهد شد.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#d33", // رنگ قرمز
+    cancelButtonColor: "#3085d6",
+    confirmButtonText: "بله، حذف کن",
+    cancelButtonText: "انصراف",
+  }).then((result) => {
+    if (result.isConfirmed) {
       deleteStudent(id).then(() => {
-        alert("دانشجو با موفقیت حذف شد.");
+        toast.error("دانشجو با موفقیت حذف شد.");
         navigate("/");
       });
     }
-  };
+  });
+};
 
   if (!student)
     return <div className="loading">در حال بارگذاری اطلاعات...</div>;
 
   return (
     <div className="student-detail-container">
-      <div className="student-card">
-        <img src={student.image} alt={student.name} className="student-image" />
-        <h2 className="student-title">{student.name}</h2>
+      <div className="student-card-section">
+        {student.image &&
+        /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(student.image) ? (
+          <img
+            src={student.image}
+            alt={student.name}
+            className="student-image-section"
+          />
+        ) : (
+          <FontAwesomeIcon
+            icon={faUserCircle}
+            className="student-image-section default-avatar"
+          />
+        )}
 
         <div className="form-group">
           <label>نام:</label>

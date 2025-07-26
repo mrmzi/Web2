@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import StudentDetail from "./Pages/StudentDetail";
 import { addStudent } from "./services/api";
 import StudentForm from "./components/StudentForm";
+import { ToastContainer } from "react-toastify";
 function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [students, setStudents] = useState([]);
@@ -18,6 +19,11 @@ function App() {
 
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        toastClassName="custom-toast"
+        bodyClassName="custom-toast-body"
+      />
       <Navbar onAddClick={() => setIsFormOpen(true)} />
       <Routes>
         <Route
